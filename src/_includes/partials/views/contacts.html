@@ -1,0 +1,101 @@
+{% raw %}
+<sc-if value="{{ isContacts }}">
+<div>
+
+  <section style="background:#F4F8F8;border-bottom:1px solid #EEF2F2;">
+    <div style="max-width:1220px;margin:0 auto;padding:64px 24px;">
+      <p style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2EB6BE;margin:0 0 14px;">Контакты</p>
+      <h1 style="font-size:clamp(32px,4.4vw,52px);font-weight:800;letter-spacing:-0.03em;margin:0;line-height:1.04;">Свяжитесь с нами</h1>
+    </div>
+  </section>
+
+  <section class="rs-contact-grid" style="max-width:1220px;margin:0 auto;padding:56px 24px 90px;">
+
+    <!-- info -->
+    <div>
+      <div style="display:flex;flex-direction:column;gap:22px;margin-bottom:32px;">
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:46px;height:46px;border-radius:12px;background:#EAF7F8;display:flex;align-items:center;justify-content:center;flex:none;color:#2EB6BE">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px;color:#7A847F;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Адрес</div>
+            <div style="font-size:16px;line-height:1.5;color:#1D1D1B;font-weight:600;">620144, Свердловская область,<br>г. Екатеринбург, ул. Айвазовского, стр. 53, помещ. 5</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:46px;height:46px;border-radius:12px;background:#EAF7F8;display:flex;align-items:center;justify-content:center;flex:none;color:#2EB6BE">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px;color:#7A847F;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Телефон</div>
+            <a href="tel:{{ phoneHref }}" style="font-size:18px;color:#1D1D1B;font-weight:700;text-decoration:none;" style-hover="color:#2EB6BE;">{{ phone }}</a>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:46px;height:46px;border-radius:12px;background:#EAF7F8;display:flex;align-items:center;justify-content:center;flex:none;color:#2EB6BE">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-at-sign-icon lucide-at-sign"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px;color:#7A847F;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">E-mail</div>
+            <a href="mailto:info@rus-endo.ru" style="font-size:18px;color:#1D1D1B;font-weight:700;text-decoration:none;" style-hover="color:#2EB6BE;">info@rus-endo.ru</a>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="width:46px;height:46px;border-radius:12px;background:#EAF7F8;display:flex;align-items:center;justify-content:center;flex:none;color:#2EB6BE">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px;color:#7A847F;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Сайт</div>
+            <a href="https://www.rus-endo.ru" target="_blank" style="font-size:18px;color:#1D1D1B;font-weight:700;text-decoration:none;" style-hover="color:#2EB6BE;">www.rus-endo.ru</a>
+          </div>
+        </div>
+      </div>
+      <div style="height:220px;border-radius:16px;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 12px,#F7FAFA 12px,#F7FAFA 24px);border:1px solid #E8ECEC;display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#9AA3A2;letter-spacing:0.06em;">карта · Екатеринбург</span></div>
+    </div>
+
+    <!-- form -->
+    <div style="background:#fff;border:1px solid #E8ECEC;border-radius:20px;padding:40px;box-shadow:0 18px 44px -26px rgba(29,29,27,0.25);">
+      <sc-if value="{{ formSent }}">
+        <div style="text-align:center;padding:30px 10px;">
+          <div style="width:64px;height:64px;border-radius:50%;background:#EAF7F8;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;"><span style="width:24px;height:13px;border-left:4px solid #2EB6BE;border-bottom:4px solid #2EB6BE;transform:rotate(-45deg);margin-top:-6px;"></span></div>
+          <h3 style="font-size:24px;font-weight:800;margin:0 0 10px;">Заявка отправлена</h3>
+          <p style="font-size:16px;color:#6A736F;line-height:1.55;margin:0 0 24px;">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+          <button onClick="{{ resetForm }}" style="padding:13px 26px;background:#fff;color:#1D1D1B;border:1.5px solid #D8DEDE;border-radius:11px;font-weight:700;font-size:15px;cursor:pointer;" style-hover="border-color:#2EB6BE;color:#2EB6BE;">Отправить ещё одну</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ formNotSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}">
+          <h2 style="font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-0.01em;">Форма обратной связи</h2>
+          <p style="font-size:15px;color:#7A847F;margin:0 0 26px;">Оставьте заявку — ответим на вопросы по оборудованию и поставкам.</p>
+          <div style="margin-bottom:18px;">
+            <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Имя <span style="color:#2EB6BE;">*</span></label>
+            <input value="{{ fName }}" onInput="{{ setName }}" placeholder="Как к вам обращаться" style="width:100%;padding:13px 15px;border:1.5px solid {{ nameBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
+            <sc-if value="{{ errName }}"><div style="font-size:13px;color:#D5524C;margin-top:6px;">Укажите имя</div></sc-if>
+          </div>
+          <div class="rs-form-2col">
+            <div>
+              <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Телефон</label>
+              <input value="{{ fPhone }}" onInput="{{ setPhone }}" placeholder="+7 (___) ___-__-__" style="width:100%;padding:13px 15px;border:1.5px solid {{ contactBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
+            </div>
+            <div>
+              <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">E-mail</label>
+              <input value="{{ fEmail }}" onInput="{{ setEmail }}" placeholder="you@mail.ru" style="width:100%;padding:13px 15px;border:1.5px solid {{ contactBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
+            </div>
+          </div>
+          <sc-if value="{{ errContact }}"><div style="font-size:13px;color:#D5524C;margin:-10px 0 14px;">Укажите телефон или e-mail для связи</div></sc-if>
+          <div style="margin-bottom:22px;">
+            <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Сообщение <span style="color:#2EB6BE;">*</span></label>
+            <textarea value="{{ fMessage }}" onInput="{{ setMessage }}" placeholder="Опишите ваш запрос" rows="4" style="width:100%;padding:13px 15px;border:1.5px solid {{ messageBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;resize:vertical;font-family:inherit;" style-focus="border-color:#2EB6BE;"></textarea>
+            <sc-if value="{{ errMessage }}"><div style="font-size:13px;color:#D5524C;margin-top:6px;">Введите сообщение</div></sc-if>
+          </div>
+          <button type="submit" style="width:100%;padding:16px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;" style-hover="background:#239aa1;">Отправить заявку</button>
+          <p style="font-size:12.5px;color:#A0A8A6;text-align:center;margin:14px 0 0;line-height:1.5;">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
+        </form>
+      </sc-if>
+    </div>
+
+  </section>
+</div>
+</sc-if>
+{% endraw %}

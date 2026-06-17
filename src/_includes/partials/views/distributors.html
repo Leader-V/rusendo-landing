@@ -1,0 +1,39 @@
+{% raw %}
+<sc-if value="{{ isDistributors }}">
+<div>
+
+  <section style="background:#F4F8F8;border-bottom:1px solid #EEF2F2;">
+    <div style="max-width:1220px;margin:0 auto;padding:64px 24px;">
+      <p style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2EB6BE;margin:0 0 14px;">Дистрибьюторы</p>
+      <h1 style="font-size:clamp(32px,4.4vw,52px);font-weight:800;letter-spacing:-0.03em;margin:0 0 16px;max-width:760px;line-height:1.04;">Где приобрести оборудование Русэндо</h1>
+      <p style="font-size:17px;color:#54605D;margin:0;max-width:620px;">Поставки осуществляются через сеть официальных партнёров по всей России.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1220px;margin:0 auto;padding:56px 24px 40px;">
+    <div class="rs-grid-3">
+      <sc-for list="{{ distributors }}" as="d" hint-placeholder-count="6">
+        <div style="background:#fff;border:1px solid #E8ECEC;border-radius:18px;padding:28px;">
+          <div style="height:64px;border-radius:12px;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 10px,#F7FAFA 10px,#F7FAFA 20px);display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid #EEF2F2;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#9AA3A2;letter-spacing:0.05em;">логотип</span></div>
+          <div style="font-size:13px;font-weight:700;color:#2EB6BE;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">{{ d.region }}</div>
+          <div style="font-size:19px;font-weight:800;margin-bottom:4px;">{{ d.name }}</div>
+          <div style="font-size:14px;color:#7A847F;">{{ d.city }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="font-size:13px;color:#A0A8A6;margin:24px 2px 0;font-style:italic;">Раздел заполняется — список официальных дистрибьюторов будет дополнен.</p>
+  </section>
+
+  <section style="max-width:1220px;margin:0 auto;padding:20px 24px 90px;">
+    <div class="rs-cta-inner" style="background:#1D1D1B;border-radius:24px;padding:54px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+      <div style="max-width:560px;">
+        <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin:0 0 12px;line-height:1.1;">Хотите стать дистрибьютором?</h2>
+        <p style="font-size:16.5px;line-height:1.55;color:rgba(255,255,255,0.72);margin:0;">Приглашаем к сотрудничеству компании, поставляющие медицинское оборудование.</p>
+      </div>
+      <button onClick="{{ goContacts }}" style="padding:16px 32px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;white-space:nowrap;" style-hover="background:#239aa1;">Оставить заявку</button>
+    </div>
+  </section>
+
+</div>
+</sc-if>
+{% endraw %}

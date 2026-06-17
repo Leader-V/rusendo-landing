@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Русэндо — Видеоэндоскопические системы
+---
+<x-dc>
+<div style="min-height:100vh;display:flex;flex-direction:column;">
+
+  {% include "partials/header.html" %}
+
+  <main style="flex:1;">
+    {% include "partials/views/home.html" %}
+    {% include "partials/views/catalog.html" %}
+    {% include "partials/views/product-generic.html" %}
+    {% include "partials/views/product-a2600.html" %}
+    {% include "partials/views/about.html" %}
+    {% include "partials/views/distributors.html" %}
+    {% include "partials/views/contacts.html" %}
+  </main>
+
+  {% include "partials/footer.html" %}
+
+</div>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script data-props='{"heroTitle":{"editor":"text","default":"РуСкейп А-2600"},"heroTagline":{"editor":"text","default":"Первая гибридная видеоэндоскопическая система российского производства. Видеопроцессор, источник света, камеры 2K и эндоскопы серии А20."},"companyPhone":{"editor":"text","default":"+7 (922) 184-95-10"},"showProcurement":{"editor":"boolean","default":true}}'>
+{% include "component.js" %}
+</script>

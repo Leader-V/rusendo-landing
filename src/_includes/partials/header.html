@@ -1,0 +1,32 @@
+{% raw %}
+<header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid #E8ECEC;">
+  <div style="max-width:1220px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px;">
+
+    <button onClick="{{ goHome }}" style="display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;">
+      <img src="/assets/images/logo/rusendo_logo_full.png" style="height:32px;" alt="Русэндо">
+    </button>
+
+    <nav class="rs-nav-desktop">
+      <button onClick="{{ goAbout }}"    style="background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#3A403E;padding:6px 0;white-space:nowrap;" style-hover="color:#2EB6BE;">О компании</button>
+      <button onClick="{{ goCatalog }}"  style="background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#3A403E;padding:6px 0;white-space:nowrap;" style-hover="color:#2EB6BE;">Каталог</button>
+      <button onClick="{{ goDist }}"     style="background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#3A403E;padding:6px 0;white-space:nowrap;" style-hover="color:#2EB6BE;">Дистрибьюторы</button>
+      <button onClick="{{ goContacts }}" style="background:none;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#3A403E;padding:6px 0;white-space:nowrap;" style-hover="color:#2EB6BE;">Контакты</button>
+    </nav>
+
+    <a href="tel:{{ phoneHref }}" class="rs-phone-btn" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;background:#EAF7F8;color:#1B7F85;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;" style-hover="background:#d8f0f1;">{{ phone }}</a>
+
+    <button onClick="{{ toggleMenu }}" class="rs-nav-burger" aria-label="Меню">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+    </button>
+
+  </div>
+
+  <div class="rs-nav-mobile" style="display:{{ menuDisplay }};">
+    <button class="rs-nav-mobile-btn" onClick="{{ goAbout }}">О компании</button>
+    <button class="rs-nav-mobile-btn" onClick="{{ goCatalog }}">Каталог</button>
+    <button class="rs-nav-mobile-btn" onClick="{{ goDist }}">Дистрибьюторы</button>
+    <button class="rs-nav-mobile-btn" onClick="{{ goContacts }}">Контакты</button>
+    <a href="tel:{{ phoneHref }}" class="rs-nav-mobile-phone">{{ phone }}</a>
+  </div>
+</header>
+{% endraw %}

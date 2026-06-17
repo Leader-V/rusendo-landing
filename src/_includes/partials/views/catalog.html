@@ -1,0 +1,91 @@
+{% raw %}
+<sc-if value="{{ isCatalog }}">
+<div>
+
+  <section style="background:#F4F8F8;border-bottom:1px solid #EEF2F2;">
+    <div style="max-width:1220px;margin:0 auto;padding:56px 24px;">
+      <p style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2EB6BE;margin:0 0 12px;">Каталог</p>
+      <h1 style="font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-0.025em;margin:0;">Оборудование Русэндо</h1>
+      <p style="font-size:17px;color:#54605D;margin:14px 0 0;max-width:640px;">Видеоэндоскопические системы, стойки и оборудование для обработки эндоскопов.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1220px;margin:0 auto;padding:48px 24px 90px;">
+    <div class="rs-grid-3" style="gap:22px;">
+
+      <button onClick="{{ openVideosystem }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="background:#fff;border-bottom:1px solid #EEF2F2;"><img src="/assets/images/endoscopes/DSC03656.jpg" alt="" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;" /></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Видеосистема А-2600</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Гибридная видеоэндоскопическая система</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Видеопроцессор с источником света, камеры 2K и эндоскопы серии А20 — единый зарегистрированный комплекс.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openTrolley }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="background:#fff;border-bottom:1px solid #EEF2F2;"><img src="/assets/images/endoscopes/DSC03799.jpg" alt="" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;" /></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Тележка Т-2000</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Мобильная эндоскопическая стойка</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Передвижная стойка с кронштейнами для мониторов, полками и держателями эндоскопов.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openCo2 }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="aspect-ratio:4/3;border-bottom:1px solid #EEF2F2;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 11px,#F7FAFA 11px,#F7FAFA 22px);display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#9AA3A2;letter-spacing:0.06em;">фото · скоро</span></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Инсуффлятор CO₂</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Подача углекислого газа</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Контролируемая инсуффляция CO₂ с точной регулировкой давления и потока.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openIrrigator }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="aspect-ratio:4/3;border-bottom:1px solid #EEF2F2;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 11px,#F7FAFA 11px,#F7FAFA 22px);display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#9AA3A2;letter-spacing:0.06em;">фото · скоро</span></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Ирригатор</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Помпа подачи жидкости</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Перистальтическая помпа для подачи и аспирации жидкости при эндоскопических процедурах.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openSink1 }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="aspect-ratio:4/3;border-bottom:1px solid #EEF2F2;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 11px,#F7FAFA 11px,#F7FAFA 22px);display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#9AA3A2;letter-spacing:0.06em;">фото · скоро</span></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Мойка 1</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Предварительная обработка</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Мойка для предварительной очистки и дезинфекции гибких эндоскопов.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openSink2 }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="aspect-ratio:4/3;border-bottom:1px solid #EEF2F2;background:repeating-linear-gradient(135deg,#EEF3F3,#EEF3F3 11px,#F7FAFA 11px,#F7FAFA 22px);display:flex;align-items:center;justify-content:center;"><span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#9AA3A2;letter-spacing:0.06em;">фото · скоро</span></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Мойка 2</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Финишная обработка</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Мойка для финишной обработки, ополаскивания и подготовки эндоскопов к хранению.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+      <button onClick="{{ openWater }}" style="text-align:left;background:#fff;border:1px solid #E8ECEC;border-radius:18px;overflow:hidden;cursor:pointer;padding:0;display:flex;flex-direction:column;" style-hover="border-color:#2EB6BE;box-shadow:0 14px 34px -18px rgba(29,29,27,0.3);">
+        <div style="background:#fff;border-bottom:1px solid #EEF2F2;"><img src="/assets/images/endoscopes/DSC03853.jpg" alt="" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;" /></div>
+        <div style="padding:22px 24px;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em;">Система водоподготовки</div>
+          <div style="font-size:14px;font-weight:600;color:#2EB6BE;margin-top:4px;">Трёхступенчатая фильтрация</div>
+          <p style="font-size:14.5px;line-height:1.5;color:#6A736F;margin:12px 0 18px;flex:1;">Настенная система фильтрации и водоподготовки для финишной обработки эндоскопов.</p>
+          <span style="font-size:15px;font-weight:700;color:#1D1D1B;">Подробнее →</span>
+        </div>
+      </button>
+
+    </div>
+  </section>
+
+</div>
+</sc-if>
+{% endraw %}

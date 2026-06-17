@@ -1,0 +1,36 @@
+{% raw %}
+<footer style="background:#1D1D1B;color:#fff;">
+  <div class="rs-footer-grid" style="max-width:1220px;margin:0 auto;padding:60px 24px 36px;">
+
+    <div>
+      <button onClick="{{ goHome }}" style="display:flex;align-items:center;gap:11px;background:none;border:none;cursor:pointer;padding:0;margin-bottom:18px;">
+        <img src="/assets/images/logo/rusendo_logo_full.png" style="height:32px;" alt="Русэндо">
+      </button>
+      <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0;max-width:320px;">Отечественный производитель видеоэндоскопических систем и оборудования для эндоскопии.</p>
+    </div>
+
+    <div>
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.45);margin-bottom:16px;">Разделы</div>
+      <div style="display:flex;flex-direction:column;gap:11px;align-items:flex-start;">
+        <button onClick="{{ goAbout }}"    style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.78);font-size:15px;padding:0;" style-hover="color:#2EB6BE;">О компании</button>
+        <button onClick="{{ goCatalog }}"  style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.78);font-size:15px;padding:0;" style-hover="color:#2EB6BE;">Каталог</button>
+        <button onClick="{{ goDist }}"     style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.78);font-size:15px;padding:0;" style-hover="color:#2EB6BE;">Дистрибьюторы</button>
+        <button onClick="{{ goContacts }}" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.78);font-size:15px;padding:0;" style-hover="color:#2EB6BE;">Контакты</button>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.45);margin-bottom:16px;">Контакты</div>
+      <div style="font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.78);">
+        620144, г. Екатеринбург,<br>ул. Айвазовского, стр. 53, помещ. 5<br>
+        <a href="tel:{{ phoneHref }}" style="color:#fff;text-decoration:none;font-weight:600;" style-hover="color:#2EB6BE;">{{ phone }}</a><br>
+        <a href="mailto:info@rus-endo.ru" style="color:#fff;text-decoration:none;font-weight:600;" style-hover="color:#2EB6BE;">info@rus-endo.ru</a>
+      </div>
+    </div>
+
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.1);">
+    <div style="max-width:1220px;margin:0 auto;padding:22px 24px;font-size:13px;color:rgba(255,255,255,0.45);">© 2025 ООО «Русэндо». Все права защищены.</div>
+  </div>
+</footer>
+{% endraw %}
