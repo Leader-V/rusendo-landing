@@ -92,13 +92,10 @@ class Component extends DCLogic {
 
   distributors() {
     return [
-      { region: 'Уральский ФО',       name: 'Региональный партнёр', city: 'Екатеринбург' },
-      { region: 'Центральный ФО',      name: 'Региональный партнёр', city: 'Москва' },
-      { region: 'Северо-Западный ФО',  name: 'Региональный партнёр', city: 'Санкт-Петербург' },
-      { region: 'Приволжский ФО',      name: 'Региональный партнёр', city: 'Казань' },
-      { region: 'Сибирский ФО',        name: 'Региональный партнёр', city: 'Новосибирск' },
-      { region: 'Южный ФО',            name: 'Региональный партнёр', city: 'Краснодар' },
-    ];
+      { name: 'Лидер Медицина',            legal: 'ООО «Лидер Медицина»',            inn: '6671245345', email: 'info@lidermedicina.ru', site: '',             siteHref: '' },
+      { name: 'Развитие',                  legal: 'ООО «Развитие»',                  inn: '6686012897', email: 'info@rzvit.ru',         site: 'rzvit.ru',     siteHref: 'https://rzvit.ru' },
+      { name: 'Новая медицинская компания', legal: 'ООО «Новая медицинская компания»', inn: '5039009519', email: 'info@newmedcom.ru',    site: 'newmedcom.ru', siteHref: 'https://newmedcom.ru' },
+    ].map(d => ({ ...d, hasSite: !!d.site }));
   }
 
   go(view) { this.setState({ view, slug: null, menuOpen: false }); this._top(); }
@@ -128,7 +125,7 @@ class Component extends DCLogic {
     const prods    = this.products();
     const selected = prods.find(p => p.slug === this.state.slug) || null;
     const isA2600  = view === 'product' && selected && selected.slug === 'videosystem-a-2600';
-    const phone    = this.props.companyPhone || '+7 (922) 184-95-10';
+    const phone    = this.props.companyPhone || '8 343 319-09-00';
 
     const slideDots = sl.map((s, i) => ({
       i,
@@ -164,7 +161,7 @@ class Component extends DCLogic {
 
       // герой
       heroTitle:   this.props.heroTitle   || 'РуСкейп А-2600',
-      heroTagline: this.props.heroTagline || 'Первая гибридная видеоэндоскопическая система российского производства. Видеопроцессор, источник света, камеры 2K и эндоскопы серии А20.',
+      heroTagline: this.props.heroTagline || 'Первая гибридная видеоэндоскопическая система российского производства.',
       curTitle: cur.t,
       curSub:   cur.s,
       op0: idx === 0 ? 1 : 0,
