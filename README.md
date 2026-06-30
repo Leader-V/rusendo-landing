@@ -7,7 +7,7 @@
 ### 1. Собрать сайт на сервере
 
 ```bash
-git clone <repo> /opt/rusendo-landing
+git clone https://github.com/Leader-V/rusendo-landing.git /opt/rusendo-landing
 ```
 ! Перед деплоем убрать строку !
 
@@ -17,11 +17,13 @@ git clone <repo> /opt/rusendo-landing
 
 из `src/_includes/layouts/base.njk`, иначе сайт не будет индексироваться поисковиками.
 
+Сборка:
+
 ```bash
-cd /opt/rusendo-landing
-npm ci
-npm run build    # результат в /opt/rusendo-landing/_site
+cd /opt/rusendo-landing && npm ci && npm run build
 ```
+
+результат в `/opt/rusendo-landing/_site`
 
 ### 2. Конфиг nginx
 
