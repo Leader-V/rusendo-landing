@@ -88,7 +88,8 @@
             <textarea value="{{ fMessage }}" onInput="{{ setMessage }}" placeholder="Опишите ваш запрос" rows="4" style="width:100%;padding:13px 15px;border:1.5px solid {{ messageBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;resize:vertical;font-family:inherit;" style-focus="border-color:#2EB6BE;"></textarea>
             <sc-if value="{{ errMessage }}"><div style="font-size:13px;color:#D5524C;margin-top:6px;">Введите сообщение</div></sc-if>
           </div>
-          <button type="submit" style="width:100%;padding:16px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;" style-hover="background:#239aa1;">Отправить заявку</button>
+          <button type="submit" disabled="{{ sending }}" style="width:100%;padding:16px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;opacity:{{ submitOpacity }};" style-hover="background:#239aa1;">{{ submitLabel }}</button>
+          <sc-if value="{{ sendError }}"><div style="font-size:13.5px;color:#D5524C;text-align:center;margin:14px 0 0;line-height:1.5;">{{ sendError }}</div></sc-if>
           <p style="font-size:12.5px;color:#A0A8A6;text-align:center;margin:14px 0 0;line-height:1.5;">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
         </form>
       </sc-if>

@@ -6,6 +6,7 @@ class Component extends DCLogic {
     menuOpen: false,
     form: { name: '', phone: '', email: '', message: '' },
     errName: false, errContact: false, errMessage: false,
+    sending: false, sendError: '',
     formSent: false,
   };
 
@@ -106,15 +107,49 @@ class Component extends DCLogic {
 
   submit(e) {
     if (e && e.preventDefault) e.preventDefault();
+    if (this.state.sending) return;
+
     const f = this.state.form;
     const errName    = !f.name.trim();
     const errContact = !f.phone.trim() && !f.email.trim();
     const errMessage = !f.message.trim();
     if (errName || errContact || errMessage) {
-      this.setState({ errName, errContact, errMessage, formSent: false });
+      this.setState({ errName, errContact, errMessage, sendError: '', formSent: false });
       return;
     }
-    this.setState({ errName: false, errContact: false, errMessage: false, formSent: true });
+
+    this.setState({ errName: false, errContact: false, errMessage: false, sending: true, sendError: '' });
+
+    const cfg = (typeof window !== 'undefined' && window.RUSENDO_CONFIG) || {};
+    const url = cfg.contactApiUrl || '/api/contact';
+    const headers = { 'Content-Type': 'application/json' };
+    if (cfg.apiKey) headers['X-API-Key'] = cfg.apiKey;
+
+    const payload = {
+      name: f.name.trim(),
+      phone: f.phone.trim(),
+      email: f.email.trim(),
+      message: f.message.trim(),
+    };
+
+    fetch(url, { method: 'POST', headers, body: JSON.stringify(payload) })
+      .then(async (res) => {
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+        if (!res.ok || !data.ok) {
+          const msg = (data.errors && data.errors.join(' ')) || data.error ||
+            'Не удалось отправить заявку. Попробуйте позже или свяжитесь с нами по телефону.';
+          throw new Error(msg);
+        }
+        this.setState({ sending: false, sendError: '', formSent: true });
+      })
+      .catch((err) => {
+        this.setState({
+          sending: false,
+          sendError: (err && err.message) ||
+            'Не удалось отправить заявку. Проверьте соединение и попробуйте ещё раз.',
+        });
+      });
   }
 
   renderVals() {
@@ -215,9 +250,13 @@ class Component extends DCLogic {
       setEmail:   (e) => this.setField('email',   e.target.value),
       setMessage: (e) => this.setField('message', e.target.value),
       submit:    (e)  => this.submit(e),
-      resetForm: ()   => this.setState({ form: { name: '', phone: '', email: '', message: '' }, formSent: false }),
+      resetForm: ()   => this.setState({ form: { name: '', phone: '', email: '', message: '' }, formSent: false, sendError: '' }),
       formSent:    this.state.formSent,
       formNotSent: !this.state.formSent,
+      sending:     this.state.sending,
+      sendError:   this.state.sendError,
+      submitLabel: this.state.sending ? 'Отправка…' : 'Отправить заявку',
+      submitOpacity: this.state.sending ? '0.65' : '1',
       errName:    this.state.errName,
       errContact: this.state.errContact,
       errMessage: this.state.errMessage,
