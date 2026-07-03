@@ -20,7 +20,7 @@
           </div>
           <div>
             <div style="font-size:13px;color:#7A847F;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Адрес</div>
-            <div style="font-size:16px;line-height:1.5;color:#1D1D1B;font-weight:600;">620144, Свердловская область,<br>г. Екатеринбург, ул. Айвазовского, стр. 53, помещ. 5</div>
+            <div style="font-size:16px;line-height:1.5;color:#1D1D1B;font-weight:600;">620144, Свердловская область,<br>г. Екатеринбург, ул. Айвазовского, стр. 53</div>
           </div>
         </div>
         <div style="display:flex;gap:16px;align-items:flex-start;">
@@ -53,46 +53,17 @@
       </div>
     </div>
 
-    <!-- form -->
-    <div style="background:#fff;border:1px solid #E8ECEC;border-radius:20px;padding:40px;box-shadow:0 18px 44px -26px rgba(29,29,27,0.25);">
-      <sc-if value="{{ formSent }}">
-        <div style="text-align:center;padding:30px 10px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:#EAF7F8;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;"><span style="width:24px;height:13px;border-left:4px solid #2EB6BE;border-bottom:4px solid #2EB6BE;transform:rotate(-45deg);margin-top:-6px;"></span></div>
-          <h3 style="font-size:24px;font-weight:800;margin:0 0 10px;">Заявка отправлена</h3>
-          <p style="font-size:16px;color:#6A736F;line-height:1.55;margin:0 0 24px;">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
-          <button onClick="{{ resetForm }}" style="padding:13px 26px;background:#fff;color:#1D1D1B;border:1.5px solid #D8DEDE;border-radius:11px;font-weight:700;font-size:15px;cursor:pointer;" style-hover="border-color:#2EB6BE;color:#2EB6BE;">Отправить ещё одну</button>
-        </div>
-      </sc-if>
-      <sc-if value="{{ formNotSent }}" hint-placeholder-val="{{ true }}">
-        <form onSubmit="{{ submit }}">
-          <h2 style="font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-0.01em;">Форма обратной связи</h2>
-          <p style="font-size:15px;color:#7A847F;margin:0 0 26px;">Оставьте заявку — ответим на вопросы по оборудованию и поставкам.</p>
-          <div style="margin-bottom:18px;">
-            <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Имя <span style="color:#2EB6BE;">*</span></label>
-            <input value="{{ fName }}" onInput="{{ setName }}" placeholder="Как к вам обращаться" style="width:100%;padding:13px 15px;border:1.5px solid {{ nameBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
-            <sc-if value="{{ errName }}"><div style="font-size:13px;color:#D5524C;margin-top:6px;">Укажите имя</div></sc-if>
-          </div>
-          <div class="rs-form-2col">
-            <div>
-              <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Телефон</label>
-              <input value="{{ fPhone }}" onInput="{{ setPhone }}" placeholder="+7 (___) ___-__-__" style="width:100%;padding:13px 15px;border:1.5px solid {{ contactBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
-            </div>
-            <div>
-              <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">E-mail</label>
-              <input value="{{ fEmail }}" onInput="{{ setEmail }}" placeholder="you@mail.ru" style="width:100%;padding:13px 15px;border:1.5px solid {{ contactBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;" style-focus="border-color:#2EB6BE;" />
-            </div>
-          </div>
-          <sc-if value="{{ errContact }}"><div style="font-size:13px;color:#D5524C;margin:-10px 0 14px;">Укажите телефон или e-mail для связи</div></sc-if>
-          <div style="margin-bottom:22px;">
-            <label style="display:block;font-size:13.5px;font-weight:700;color:#3A403E;margin-bottom:7px;">Сообщение <span style="color:#2EB6BE;">*</span></label>
-            <textarea value="{{ fMessage }}" onInput="{{ setMessage }}" placeholder="Опишите ваш запрос" rows="4" style="width:100%;padding:13px 15px;border:1.5px solid {{ messageBorder }};border-radius:11px;font-size:15px;outline:none;color:#1D1D1B;resize:vertical;font-family:inherit;" style-focus="border-color:#2EB6BE;"></textarea>
-            <sc-if value="{{ errMessage }}"><div style="font-size:13px;color:#D5524C;margin-top:6px;">Введите сообщение</div></sc-if>
-          </div>
-          <button type="submit" disabled="{{ sending }}" style="width:100%;padding:16px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;opacity:{{ submitOpacity }};" style-hover="background:#239aa1;">{{ submitLabel }}</button>
-          <sc-if value="{{ sendError }}"><div style="font-size:13.5px;color:#D5524C;text-align:center;margin:14px 0 0;line-height:1.5;">{{ sendError }}</div></sc-if>
-          <p style="font-size:12.5px;color:#A0A8A6;text-align:center;margin:14px 0 0;line-height:1.5;">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
-        </form>
-      </sc-if>
+    <!-- distributors -->
+    <div style="background:#fff;border:1px solid #E8ECEC;border-radius:20px;padding:40px;box-shadow:0 18px 44px -26px rgba(29,29,27,0.25);display:flex;flex-direction:column;">
+      <div style="width:60px;height:60px;border-radius:16px;background:#EAF7F8;display:flex;align-items:center;justify-content:center;color:#2EB6BE;margin-bottom:24px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2 style="font-size:24px;font-weight:800;margin:0 0 10px;letter-spacing:-0.01em;">По всем вопросам — к дистрибьюторам</h2>
+      <p style="font-size:16px;color:#6A736F;line-height:1.6;margin:0 0 28px;">Поставки, цены и подбор оборудования ведут наши официальные дистрибьюторы. Они помогут с заказом и ответят на вопросы в вашем регионе.</p>
+      <button onClick="{{ goDist }}" style="align-self:flex-start;padding:15px 26px;background:#2EB6BE;color:#fff;border:none;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;display:inline-flex;align-items:center;gap:9px;" style-hover="background:#239aa1;">
+        Наши дистрибьюторы
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
     </div>
 
   </section>
