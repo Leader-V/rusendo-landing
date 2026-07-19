@@ -93,9 +93,9 @@ class Component extends DCLogic {
 
   distributors() {
     return [
-      { name: 'Лидер Медицина',            legal: 'ООО «Лидер Медицина»',            inn: '6671245345', email: 'info@lidermedicina.ru', site: '',             siteHref: '' },
-      { name: 'Развитие',                  legal: 'ООО «Развитие»',                  inn: '6686012897', email: 'info@rzvit.ru',         site: 'rzvit.ru',     siteHref: 'https://rzvit.ru' },
-      { name: 'Новая медицинская компания', legal: 'ООО «Новая медицинская компания»', inn: '5039009519', email: 'info@newmedcom.ru',    site: 'newmedcom.ru', siteHref: 'https://newmedcom.ru' },
+      { name: 'Лидер Медицина',            legal: 'ООО «Лидер Медицина»',            city: 'Екатеринбург', inn: '6671245345', email: 'info@lidermedicina.ru', site: '',             siteHref: '' },
+      { name: 'Развитие',                  legal: 'ООО «Развитие»',                  city: 'Москва',       inn: '6686012897', email: 'info@rzvit.ru',         site: 'rzvit.ru',     siteHref: 'https://rzvit.ru' },
+      { name: 'Новая медицинская компания', legal: 'ООО «Новая медицинская компания»', city: 'Москва',       inn: '5039009519', email: 'info@newmedcom.ru',    site: 'newmedcom.ru', siteHref: 'https://newmedcom.ru' },
     ].map(d => ({ ...d, hasSite: !!d.site }));
   }
 

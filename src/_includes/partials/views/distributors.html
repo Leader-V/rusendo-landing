@@ -13,9 +13,13 @@
   <section style="max-width:1220px;margin:0 auto;padding:56px 24px 40px;">
     <div class="rs-grid-3">
       <sc-for list="{{ distributors }}" as="d" hint-placeholder-count="3">
-        <div style="background:#fff;border:1px solid #E8ECEC;border-radius:18px;padding:28px;display:flex;flex-direction:column;">
+        <div style="background:#fff;border:1px solid #E8ECEC;border-radius:18px;padding:28px;display:flex;flex-direction:column;height: fit-content;">
           <div style="font-size:19px;font-weight:800;margin-bottom:4px;line-height:1.25;">{{ d.name }}</div>
-          <div style="font-size:14px;color:#7A847F;margin-bottom:18px;">{{ d.legal }}</div>
+          <div style="font-size:14px;color:#7A847F;margin-bottom:14px;">{{ d.legal }}</div>
+          <div style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:5px 12px 5px 9px;background:#EAF7F8;color:#2EB6BE;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            {{ d.city }}
+          </div>
           <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px;font-size:14.5px;">
             <div style="display:flex;gap:8px;">
               <span style="color:#9AA3A2;min-width:48px;">ИНН</span>
